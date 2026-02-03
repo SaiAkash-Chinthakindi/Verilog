@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-// steuctural modeling
+// structural modeling
 module full_adder(A,B,cin,sum,cout);
   input A,B,cin;
   output sum,cout;
