@@ -30,7 +30,7 @@ endmodule
        {cout,sum} = A + B + cin;
      end
    endmodule */
-   
+// gate level modeling   
 /*module  full_adder(A,B,cin,sum,cout);
    input A,B,cin;
    output sum,cout;
