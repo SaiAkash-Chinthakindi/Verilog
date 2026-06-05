@@ -16,7 +16,7 @@ module gates_tb;
     GATE_NOR  = 3'd4,
     GATE_XOR  = 3'd5,
     GATE_XNOR = 3'd6
-  } gate;
+  }gate;
 
   function logic expected(logic a, logic b, gate g);
     case (g)
