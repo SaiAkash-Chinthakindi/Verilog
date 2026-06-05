@@ -16,9 +16,9 @@ module gates_tb;
     GATE_NOR  = 3'd4,
     GATE_XOR  = 3'd5,
     GATE_XNOR = 3'd6
-  } gate_e;
+  } gate;
 
-  function logic expected(logic a, logic b, gate_e g);
+  function logic expected(logic a, logic b, gate g);
     case (g)
       GATE_AND : return a & b;
       GATE_OR  : return a | b;
@@ -31,7 +31,7 @@ module gates_tb;
     endcase
   endfunction
 
-  task automatic drive_and_check(logic a, logic b, gate_e g);
+  task automatic drive_and_check(logic a, logic b, gate g);
     A   = a;
     B   = b;
     sel = g;                 
@@ -44,9 +44,9 @@ module gates_tb;
   endtask
 
   initial begin
-    gate_e g;
+    gate g;
     for (int gi = 0; gi <= 6; gi++) begin
-      g = gate_e'(gi);
+      g = gate'(gi);
       for (int j = 0; j < 4; j++) begin
         drive_and_check(j[1], j[0], g);
       end
