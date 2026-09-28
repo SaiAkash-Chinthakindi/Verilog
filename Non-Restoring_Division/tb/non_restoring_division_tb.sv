@@ -123,6 +123,9 @@ module non_restoring_division_tb();
        fail_count = 0;
        reset;
        
+       $dumpfile("division.vcd");
+       $dumpvars(0, non_restoring_division_tb);
+       
        @(negedge clk) 
        run_inputs(50);
        
@@ -154,9 +157,6 @@ module non_restoring_division_tb();
        @(negedge clk);
        
        $display(" REGRESSION DONE: %0d passed, %0d failed (of %0d total)",pass_count, fail_count, pass_count+fail_count);
-       
-       $dumpfile("division.vcd");
-       $dumpvars(0, non_restoring_division_tb);
           
        $finish;
     end
