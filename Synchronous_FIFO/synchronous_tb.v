@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Synchronous_FIFO1_tb();
+module Synchronous_tb();
    parameter data_width = 8;
    parameter depth = 8;
    
@@ -153,7 +153,7 @@ module Synchronous_FIFO1_tb();
    endtask
    initial begin
       $dumpfile("dump.vcd");
-      $dumpvars(0, Synchronous_FIFO1_tb);
+      $dumpvars(0, Synchronous_tb);
       
       initialize;
       reset;
