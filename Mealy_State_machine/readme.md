@@ -37,22 +37,9 @@ Here, `out = 1` only when the machine is in state `s4` (already saw `1011`) and 
 
 ## State diagram
 
-Each arrow is labelled `input / output`.
+Each arrow is labelled `input / output`. The red arrow is the only place where the output becomes 1.
 
-```mermaid
-stateDiagram-v2
-    [*] --> s0
-    s0 --> s1: 1/0
-    s0 --> s0: 0/0
-    s1 --> s2: 0/0
-    s1 --> s1: 1/0
-    s2 --> s3: 1/0
-    s2 --> s0: 0/0
-    s3 --> s4: 1/0
-    s3 --> s2: 0/0
-    s4 --> s0: 0/1
-    s4 --> s1: 1/0
-```
+![State diagram](state_diagram.png)
 
 ## Example
 
@@ -91,6 +78,7 @@ The testbench does not need waveform checking. It has:
 |------------------------|------------------------------|
 | `mealy_machine1.v`     | Detector design (RTL)        |
 | `mealy_machine1_tb.v`  | Self-checking testbench      |
+| `state_diagram.png`    | State diagram image          |
 
 ## How to run
 
