@@ -4,7 +4,7 @@ module mealy_machine2_tb();
    reg  clk,rst_n, in;
    wire out;
 
-   melay_machine2 m1(.in(in), .clk(clk), .rst_n(rst_n), .out(out));
+   mealy_machine2 m1(.in(in), .clk(clk), .rst_n(rst_n), .out(out));
 
    
    reg [4:0] hist = 0;                              
