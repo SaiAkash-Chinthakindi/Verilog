@@ -74,17 +74,18 @@ The testbench does not need waveform checking. It has:
 
 ## Files
 
-| File                   | Description                  |
-|------------------------|------------------------------|
-| `mealy_machine1.v`     | Detector design (RTL)        |
-| `mealy_machine1_tb.v`  | Self-checking testbench      |
-| `state_diagram.png`    | State diagram image          |
+| File                                                   | Description                  |
+|--------------------------------------------------------|------------------------------|
+| `10110_sequence_Detection/mealy_machine1.v`            | Detector design (RTL)        |
+| `10110_sequence_Detection/mealy_machine1_tb.v`         | Self-checking testbench      |
+| `state_diagram.png`                                    | State diagram image          |
 
 ## How to run
 
 With Icarus Verilog:
 
 ```
+cd 10110_sequence_Detection
 iverilog -g2012 -o sim mealy_machine1.v mealy_machine1_tb.v
 vvp sim
 ```
