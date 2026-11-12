@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module melay_machine2(clk,rst_n,in,out);
+module mealy_machine2(clk,rst_n,in,out);
   localparam s0 = 3'b000,s1 = 3'b001,s2 = 3'b010,s3 = 3'b011,s4 = 3'b100,s5 = 3'b101;
   input clk;
   input rst_n;
